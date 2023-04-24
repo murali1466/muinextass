@@ -6,16 +6,11 @@ import {
   List,
   ListItem,
 } from "@mui/material";
-import Head from "next/head";
+import StarIcon from "@mui/icons-material/Star";
+import styles from "../../styles/components/footer.module.css";
 export default function Footer() {
   return (
     <>
-      <Head>
-        <script
-          src="https://kit.fontawesome.com/ce39d9c1b1.js"
-          crossorigin="anonymous"
-        ></script>
-      </Head>
       <Box className="footer" p="25px 0px" sx={{ backgroundColor: "#011027" }}>
         <Container>
           <Box sx={{ width: "150px", margin: "20px 0px" }}>
@@ -112,11 +107,11 @@ export default function Footer() {
                   Check out our 9 reviews
                 </Typography>
                 <Box mt="10px">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
+                  <StarIcon className={styles["iconcolor"]} />
+                  <StarIcon className={styles["iconcolor"]} />
+                  <StarIcon className={styles["iconcolor"]} />
+                  <StarIcon className={styles["iconcolor"]} />
+                  <StarIcon className={styles["iconcolor"]} />
                 </Box>
               </Box>
             </Grid>

@@ -1,6 +1,5 @@
-import { Padding } from "@mui/icons-material";
 import { AppBar, Container, List, ListItem, Box, Button } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import Link from "next/link";
 export default function Header() {
   return (
     <>
@@ -10,6 +9,7 @@ export default function Header() {
           backgroundColor: "transparent",
           shapeOutside: "0px",
         }}
+        elevation={0}
       >
         <Container
           sx={{
@@ -20,13 +20,15 @@ export default function Header() {
         >
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box className="breeze-logo" sx={{ width: "125px" }}>
-              <a href="/">
-                <img
-                  src="https://res.cloudinary.com/dm9tstije/image/upload/v1682145260/breezehome/breeze-logo_ruga6f.svg"
-                  alt="logo"
-                  width="100%"
-                />
-              </a>
+              <Link href="./" legacyBehavior>
+                <a>
+                  <img
+                    src="https://res.cloudinary.com/dm9tstije/image/upload/v1682145260/breezehome/breeze-logo_ruga6f.svg"
+                    alt="logo"
+                    width="100%"
+                  />
+                </a>
+              </Link>
             </Box>
             <Box className="nav-section">
               <List
@@ -36,13 +38,19 @@ export default function Header() {
                 }}
               >
                 <ListItem>
-                  <a>Product</a>
+                  <Link href="./product" legacyBehavior>
+                    <a>Product</a>
+                  </Link>
                 </ListItem>
                 <ListItem>
-                  <a>Resources</a>
+                  <Link href="./resource" legacyBehavior>
+                    <a>Resources</a>
+                  </Link>
                 </ListItem>
                 <ListItem>
-                  <a href="./contactus">Contact Us</a>
+                  <Link href="./contactus" legacyBehavior>
+                    <a>Contact us</a>
+                  </Link>
                 </ListItem>
                 <ListItem>
                   <a>Download</a>
